@@ -41,12 +41,15 @@ const SearchBar = () => {
 
   return (
     <div className="search-bar">
-      <input
-        type="text"
-        value={query}
-        onChange={handleChange}
-        placeholder="Search for a country or capital..."
-      />
+      <div className="search-container">
+        <input
+          type="text"
+          className="search-input"
+          value={query}
+          onChange={handleChange}
+          placeholder="Search for a country or capital..."
+        />
+      </div>
       {suggestions.length > 0 && (
         <ul className="suggestions">
           {suggestions.map((country, index) => (
